@@ -4,9 +4,12 @@ import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.txy.config.DataSourceContextHolder;
 import com.txy.domain.DataLedgerInfo;
 import com.txy.domain.SrdgDataMetaInfo;
+import com.txy.domain.THbjKqzlxx;
 import com.txy.mapper.DataLedgerInfoMapper;
 import com.txy.service.DataLedgerInfoService;
 import com.txy.service.SrdgDataMetaInfoService;
+import com.txy.service.THbjKqzlxxService;
+import org.checkerframework.checker.units.qual.A;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -23,14 +26,18 @@ class SpringBootMybatisPlusApplicationTests {
 	@Autowired
 	DataLedgerInfoMapper mapper;
 
+	@Autowired
+	THbjKqzlxxService tHbjKqzlxxService;
+
 	@Test
 	void contextLoads() {
 		//根据id 查询
-		DataLedgerInfo byId = dataLedgerInfoService.getById(1002);
+		//DataLedgerInfo byId = dataLedgerInfoService.getById(1002);
         DataSourceContextHolder.setDataSourceType("slave");
-        SrdgDataMetaInfo byId1 = srdgDataMetaInfoService.getById(1);
+        //SrdgDataMetaInfo byId1 = srdgDataMetaInfoService.getById(1);
         //
-
+		List<THbjKqzlxx> list = tHbjKqzlxxService.list();
+		THbjKqzlxx byId = tHbjKqzlxxService.getById("123");
 		System.out.println(byId);
 	}
 

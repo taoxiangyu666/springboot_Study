@@ -26,9 +26,9 @@ import com.github.davidfantasy.mybatisplus.generatorui.mbp.NameConverter;
 public class GeberatorUIServer {
 
     public static void main(String[] args) {
-        GeneratorConfig config = GeneratorConfig.builder().jdbcUrl("jdbc:mysql://192.168.200.23:3306/quality")
-                .userName("xysstgs")
-                .password("xystyfzx")
+        GeneratorConfig config = GeneratorConfig.builder().jdbcUrl("jdbc:mysql://10.65.8.54:3306/eigdb")
+                .userName("reseig")
+                .password("resdba")
                 .driverClassName("com.mysql.cj.jdbc.Driver")
                 //数据库schema，MSSQL,PGSQL,ORACLE,DB2类型的数据库需要指定
                // .schemaName("MYSQL")

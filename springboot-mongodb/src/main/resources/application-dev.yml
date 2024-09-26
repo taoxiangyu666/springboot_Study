@@ -1,0 +1,26 @@
+# springboot +mybatisPlus +druid
+#项目配置
+txy:
+  version: 1.0.0
+
+#环境配置
+server:
+  #服务器的HTTP端口号 默认8080
+  port: 8081
+  servlet:
+    #应用访问路径
+    context-path: /study-mongo
+
+spring:
+  application:
+    name: springboot-mongodb
+
+  #mongodb数据库配置
+  data:
+    mongodb:
+      uri: mongodb://wr:xOPmMh2qvoi8@192.168.111.44:27017/data-govern?authSource=admin
+      # mongodb自动创建索引
+      auto-index-creation: false
+      # 自动转驼峰
+      field-naming-strategy: org.springframework.data.mapping.model.SnakeCaseFieldNamingStrategy
+

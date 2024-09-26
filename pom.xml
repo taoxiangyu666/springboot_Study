@@ -39,4 +39,8 @@
 		</plugins>
 	</build>
 
+    <packaging>pom</packaging>
+    <!--<modules>
+        <module>dynamic-datasource</module>
+    </modules>-->
 </project>

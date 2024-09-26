@@ -15,7 +15,7 @@ import org.springframework.stereotype.Service;
  * @date 2024-08-30 09:48:39
  * @since jdk 1.8
  */
-@Service("dataLedgerInfoService")
+@Service
 @DS("slave")
 public class DataLedgerInfoServiceImpl extends ServiceImpl<DataLedgerInfoMapper,DataLedgerInfo> implements DataLedgerInfoService {
 }
